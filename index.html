@@ -1,6 +1,59 @@
 <head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet">
 
+        <link
+          rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+        />
+  
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+        }
+
+        #main_container {
+            background-color: black;
+            width: 100%;
+
+        }
+
+        #video_opacity {
+            opacity: 0.2;
+        }
+        #header_txt{
+            position: absolute;
+            top:20%;
+            right: 3%;
+            color: white;
+            font-family: 'Poppins', sans-serif;
+            font-size: 40px;
+          
+        }
+        #video_container{
+            position: relative;
+        }
+        .animate__animated.animate__bounceInRight
+        {
+            --animate-duration: 2s;
+
+        }
+    </style>
 </head>
+
 <body>
-    <h1>Hello</h1>
+    <div id="main_container">
+        <div id="video_container">
+            <div id="video_opacity">
+                <video width="100%" autoplay loop muted>
+                    <source src="/videos/test.mp4" type="video/mp4">
+                </video>
+
+
+            </div>
+            <h1 class="animate__animated animate__bounceInRight" id="header_txt">A Passionate software developer</h1>
+        </div>
+    </div>
 </body>
