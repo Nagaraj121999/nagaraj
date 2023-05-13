@@ -1,0 +1,113 @@
+<head>
+    <style>
+        #blog_container {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: flex-start;
+            align-content: flex-start;
+            width: 95%;
+            margin: auto;
+        }
+
+        #blog_div {
+            background-color: rgba(65, 74, 76, 0.7);
+            width: 200px;
+            height: 300px;
+            margin-left: 40px;
+            margin-top: 40px;
+            border-radius: 10px;
+            box-shadow: 10px 10px 11px -5px rgba(79, 79, 79, 0.75) inset;
+            position: relative;
+
+
+
+
+        }
+
+        body {
+            background-color: black;
+        }
+
+        .logo {
+            position: absolute;
+            width: 90%;
+            height: 30px;
+            left: 5%;
+            right: 5%;
+            top: 5%;
+            opacity: 0.7;
+        }
+
+        .link {
+            text-align: center;
+            color: white;
+            text-decoration: none;
+            font-family: 'Poppins', sans-serif;
+
+
+        }
+
+        #link_container {
+            position: absolute;
+            margin: auto;
+            top: 25%;
+            width: 100%;
+            text-align: center;
+        }
+
+        .blog_preview {
+            width: 170;
+            height: 122;
+            border-radius: 5px;
+        }
+
+        #image_container {
+            position: absolute;
+
+            margin: auto;
+            top: 35%;
+             width: 100%;
+            text-align: center;
+        }
+        .logo_tech{
+            width: 20;
+            height: 20;
+            border-radius: 4px;
+            border: 2px solid orange;
+
+
+        }
+        #logo_container{
+            width: 100%;
+            position:absolute;
+            top: 80%;
+            text-align: center;
+
+
+        }
+    </style>
+</head>
+
+<body>
+    <div id="blog_container">
+        <div id="blog_div">
+            <img src="/images/medium_white.png" class="logo"></img>
+            <div id="link_container">
+                <a class="Link" target="_blank"
+                    href="https://nagarajramachandran123.medium.com/session-local-storage-on-client-side-with-weather-api-example-3b6d99793e72">Session
+                    & Local Storage</a>
+
+            </div>
+            <div id="image_container">
+                <img src="/images/blog_2.png" class="blog_preview">
+
+            </div>
+            <div id="logo_container">
+                <img src="/images/js_logo.svg" class="logo_tech" >
+
+            </div>
+        </div>
+    </div>
+
+</body>
