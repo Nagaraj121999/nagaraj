@@ -5,11 +5,8 @@
 
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet">
 
-        <link
-          rel="stylesheet"
-          href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
-        />
-  
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+
     <style>
         body {
             margin: 0;
@@ -25,52 +22,60 @@
         #video_opacity {
             opacity: 0.2;
         }
-        #header_txt{
+
+        #header_txt {
             position: absolute;
-            top:20%;
+            top: 20%;
             right: 3%;
             color: white;
             font-family: 'Poppins', sans-serif;
             font-size: 40px;
             letter-spacing: 4px;
-          
+
         }
-        #video_container{
+
+        #video_container {
             position: relative;
+            width: 100%;
+            aspect-ratio: 16/9;
         }
-        .animate__animated.animate__bounceInRight
-        {
+
+        .animate__animated.animate__bounceInRight {
             --animate-duration: 2s;
 
         }
-        .button_blogs{
+
+        .button_blogs {
             font-size: 40px;
             font-family: 'Poppins', sans-serif;
-         
+
             border-radius: 20px;
             width: 500px;
             outline: none;
             background-color: orange;
             opacity: 0.5;
-      
+
 
 
         }
-        #button_Container{
+
+        #button_Container {
             position: absolute;
             right: 3%;
             transition-duration: .5s;
 
-            top:40%;
+            top: 40%;
 
         }
-        #button_container:hover{
+
+        #button_container:hover {
             transform: translateX(40px);
-transition-duration: 1s;
+            transition-duration: 1s;
         }
-        .button_blogs:hover{
+
+        .button_blogs:hover {
             cursor: pointer;
-            opacity:0.7;
+            opacity: 0.7;
 
         }
     </style>
@@ -87,12 +92,12 @@ transition-duration: 1s;
 
             </div>
             <h1 class="animate__animated animate__bounceInRight" id="header_txt">A Passionate Programmer</h1>
-            <div id = "button_container">
+            <div id="button_container">
                 <a href="blogs.html">
-            <button class="animate__animated animate__bounceInRight button_blogs" href>Blogs</button>
-        </a>
+                    <button class="animate__animated animate__bounceInRight button_blogs" href>Blogs</button>
+                </a>
 
-        </div>
+            </div>
         </div>
     </div>
 </body>
