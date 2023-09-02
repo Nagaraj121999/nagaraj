@@ -24,12 +24,11 @@
         }
 
         #header_txt {
-            position: absolute;
-            top: 20%;
-            right: 3%;
+            /* position: absolute;
+            top: 2em;
+            right: 0.5em; */
             color: white;
             font-family: 'Poppins', sans-serif;
-            font-size: 40px;
             letter-spacing: 4px;
 
         }
@@ -46,38 +45,90 @@
         }
 
         .button_blogs {
-            font-size: 40px;
+            /* font-size: 2.5em; */
             font-family: 'Poppins', sans-serif;
 
             border-radius: 20px;
-            width: 500px;
+            width: 50%;
             outline: none;
             background-color: orange;
-            opacity: 0.5;
+            opacity: 0.7;
 
 
 
         }
 
         #button_Container {
-            position: absolute;
-            right: 3%;
-            transition-duration: .5s;
+            /* position: absolute;
+            right: 0.5em;
 
-            top: 40%;
+            top: 0em; */
 
         }
 
-        #button_container:hover {
-            transform: translateX(40px);
-            transition-duration: 1s;
-        }
+       
 
         .button_blogs:hover {
             cursor: pointer;
-            opacity: 0.7;
 
         }
+        @media only screen and (min-width: 250px)  and (max-width: 725px){
+            .content_container{
+            position: absolute;
+            top:10;
+            width: 100%;
+            display:grid;
+            text-align: center;
+        }
+        #header_txt{
+            font-size: clamp(0.8em,1.5em,2em);
+
+        }
+        .mobile{
+            display: block;
+        }
+        .normal{
+            display: none;
+        }
+        #video_container{
+            aspect-ratio: 0.55/1;
+
+        }
+        .button_blogs{
+            font-size: clamp(0.8em,1em,1.8em);
+
+        }
+        }
+        @media only screen and (min-width: 726px) {
+            .content_container{
+            position: absolute;
+            top:10;
+            width: 75%;
+            left: 23%;
+            text-align: right;
+            display:grid
+        }
+        #header_txt{
+            font-size: clamp(3em,3.3em,3.5em);
+
+        }
+        .mobile{
+            display: none;
+        }
+        .normal{
+            display: block;
+        }
+        #video_container{
+            aspect-ratio: 16/9;
+
+        }
+        .button_blogs{
+            font-size: clamp(1.8em,2.5em,2.8em);
+
+        }
+
+}
+
     </style>
 </head>
 
@@ -85,18 +136,22 @@
     <div id="main_container">
         <div id="video_container">
             <div id="video_opacity">
-                <video width="100%" autoplay loop muted>
+                <video width="100%" autoplay loop muted class="normal">
                     <source src="https://nagaraj121999.github.io/nagaraj/videos/react.mkv" type="video/mp4">
                 </video>
-
+                <video width="100%" autoplay loop muted class="mobile">
+                    <source src="https://nagaraj121999.github.io/nagaraj/videos/react_mobile.mp4" type="video/mp4">
+                </video>
 
             </div>
-            <h1 class="animate__animated animate__bounceInRight" id="header_txt">A Passionate Programmer</h1>
-            <div id="button_container">
-                <a href="blogs.html">
-                    <button class="animate__animated animate__bounceInRight button_blogs" href>Blogs</button>
-                </a>
+            <div class="content_container">
+                <h1 class="animate__animated animate__bounceInRight" id="header_txt">A Passionate Programmer</h1>
+                <div id="button_container">
+                    <a href="blogs.html">
+                        <button class="animate__animated animate__bounceInRight button_blogs" href>Blogs</button>
+                    </a>
 
+                </div>
             </div>
         </div>
     </div>
