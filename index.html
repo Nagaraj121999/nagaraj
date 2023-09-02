@@ -24,9 +24,7 @@
         }
 
         #header_txt {
-            /* position: absolute;
-            top: 2em;
-            right: 0.5em; */
+           
             color: white;
             font-family: 'Poppins', sans-serif;
             letter-spacing: 4px;
@@ -45,7 +43,6 @@
         }
 
         .button_blogs {
-            /* font-size: 2.5em; */
             font-family: 'Poppins', sans-serif;
 
             border-radius: 20px;
@@ -53,25 +50,14 @@
             outline: none;
             background-color: orange;
             opacity: 0.7;
-
+            border-style: none;
 
 
         }
 
-        #button_Container {
-            /* position: absolute;
-            right: 0.5em;
-
-            top: 0em; */
-
-        }
 
        
 
-        .button_blogs:hover {
-            cursor: pointer;
-
-        }
         @media only screen and (min-width: 250px)  and (max-width: 725px){
             .content_container{
             position: absolute;
@@ -98,6 +84,8 @@
             font-size: clamp(0.8em,1em,1.8em);
 
         }
+        
+       
         }
         @media only screen and (min-width: 726px) {
             .content_container{
@@ -124,6 +112,11 @@
         }
         .button_blogs{
             font-size: clamp(1.8em,2.5em,2.8em);
+
+        }
+        .button_blogs:hover {
+            cursor: pointer;
+            opacity: 0.9;
 
         }
 
