@@ -14,7 +14,6 @@
         }
 
         #main_container {
-            background-color: black;
             width: 100%;
 
         }
@@ -24,7 +23,7 @@
         }
 
         #header_txt {
-           
+
             color: white;
             font-family: 'Poppins', sans-serif;
             letter-spacing: 4px;
@@ -32,6 +31,7 @@
         }
 
         #video_container {
+            background-color: black;
             position: relative;
             width: 100%;
             aspect-ratio: 16/9;
@@ -55,73 +55,155 @@
 
         }
 
+        h3 {
+            color: black;
+            font-family: 'Poppins', sans-serif;
+            letter-spacing: 2px;
 
-       
-
-        @media only screen and (min-width: 250px)  and (max-width: 725px){
-            .content_container{
-            position: absolute;
-            top:10;
-            width: 100%;
-            display:grid;
-            text-align: center;
-        }
-        #header_txt{
-            font-size: clamp(0.8em,1.5em,2em);
 
         }
-        .mobile{
-            display: block;
-        }
-        .normal{
-            display: none;
-        }
-        #video_container{
-            aspect-ratio: 0.55/1;
 
+        .link_logo,
+        .mail_logo {
+            width: 40;
+            height: 40;
+            fill: grey
         }
-        .button_blogs{
-            font-size: clamp(0.8em,1em,1.8em);
 
-        }
-        
-       
-        }
-        @media only screen and (min-width: 726px) {
-            .content_container{
-            position: absolute;
-            top:10;
-            width: 75%;
-            left: 23%;
-            text-align: right;
-            display:grid
-        }
-        #header_txt{
-            font-size: clamp(3em,3.3em,3.5em);
-
-        }
-        .mobile{
-            display: none;
-        }
-        .normal{
-            display: block;
-        }
-        #video_container{
-            aspect-ratio: 16/9;
-
-        }
-        .button_blogs{
-            font-size: clamp(1.8em,2.5em,2.8em);
-
-        }
-        .button_blogs:hover {
+        .link_logo:hover {
+            fill: #0077B5;
             cursor: pointer;
-            opacity: 0.9;
+        }
+
+        .mail_logo>.mail_v1,
+        .mail_v2,
+        .mail_v4,
+        .mail_v3,
+        .mail_v5 {
+            fill: grey;
+        }
+
+        .mail_logo:hover {
+            cursor: pointer;
+        }
+
+        .mail_logo:hover>.mail_v1 {
+            fill: #4285f4
+        }
+
+        .mail_logo:hover>.mail_v2 {
+            fill: #34a853
+        }
+
+        .mail_logo:hover>.mail_v3 {
+            fill: #fbbc04
+        }
+
+        .mail_logo:hover>.mail_v4 {
+            fill: #ea4335
+        }
+
+        .mail_logo:hover>.mail_v5 {
+            fill: #c5221f
+        }
+        .fb_logo{
+            fill: gray;
+            width: 40;
+            height: 40;
+        }
+        .fb_logo:hover{
+            fill:#4267B2;
+            cursor:pointer;
+        }
+        .social_container {
+            display: grid;
+            justify-content: center;
+        }
+        .connect_container{
+            display: grid;
+grid-template-columns: repeat(3, auto);
+justify-items: center;
+        }
+        .connect_children{
+            align-self: center;
+        }
+
+        @media only screen and (min-width: 250px) and (max-width: 725px) {
+            .content_container {
+                position: absolute;
+                top: 10;
+                width: 100%;
+                display: grid;
+                text-align: center;
+            }
+
+            #header_txt {
+                font-size: clamp(0.8em, 1.5em, 2em);
+
+            }
+
+            .mobile {
+                display: block;
+            }
+
+            .normal {
+                display: none;
+            }
+
+            #video_container {
+                aspect-ratio: 0.55/1;
+
+            }
+
+            .button_blogs {
+                font-size: clamp(0.8em, 1em, 1.8em);
+
+            }
+
 
         }
 
-}
+        @media only screen and (min-width: 726px) {
+            .content_container {
+                position: absolute;
+                top: 10;
+                width: 75%;
+                left: 23%;
+                text-align: right;
+                display: grid;
+                grid-gap: 1.5em;
+            }
 
+            #header_txt {
+                font-size: clamp(3em, 3.3em, 3.5em);
+
+            }
+
+            .mobile {
+                display: none;
+            }
+
+            .normal {
+                display: block;
+            }
+
+            #video_container {
+                aspect-ratio: 16/9;
+
+            }
+
+            .button_blogs {
+                font-size: clamp(1.8em, 2.5em, 2.8em);
+
+            }
+
+            .button_blogs:hover {
+                cursor: pointer;
+                opacity: 0.9;
+
+            }
+
+        }
     </style>
 </head>
 
@@ -137,15 +219,65 @@
                 </video>
 
             </div>
-            <div class="content_container">
-                <h1 class="animate__animated animate__bounceInRight" id="header_txt">A Passionate Programmer</h1>
+            <div class="content_container animate__animated animate__fadeInLeft">
+                <h1 id="header_txt">A Passionate Programmer</h1>
                 <div id="button_container">
                     <a href="blogs.html">
-                        <button class="animate__animated animate__bounceInRight button_blogs" href>Blogs</button>
+                        <button class="button_blogs" href>Blogs</button>
                     </a>
+
+
+                </div>
+                <div id="button_container">
+                    <a href="pdf.html">
+                        <button class="button_blogs" href>PDF Resource</button>
+                    </a>
+
 
                 </div>
             </div>
         </div>
+        <div class="social_container">
+            <h3> Connect With Me</h3>
+            <div class="connect_container">
+                <div class="connect_children">
+                    <a href="https://in.linkedin.com/in/nagaraj-ramachandran-37152b149" target="_blank">
+                    <svg class="link_logo" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg"
+                        xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 455 455" xml:space="preserve">
+                        <g>
+                            <path style="fill-rule:evenodd;clip-rule:evenodd;"
+                                d="M246.4,204.35v-0.665c-0.136,0.223-0.324,0.446-0.442,0.665H246.4z" />
+                            <path style="fill-rule:evenodd;clip-rule:evenodd;" d="M0,0v455h455V0H0z M141.522,378.002H74.016V174.906h67.506V378.002z
+                     M107.769,147.186h-0.446C84.678,147.186,70,131.585,70,112.085c0-19.928,15.107-35.087,38.211-35.087
+                    c23.109,0,37.31,15.159,37.752,35.087C145.963,131.585,131.32,147.186,107.769,147.186z M385,378.002h-67.524V269.345
+                    c0-27.291-9.756-45.92-34.195-45.92c-18.664,0-29.755,12.543-34.641,24.693c-1.776,4.34-2.24,10.373-2.24,16.459v113.426h-67.537
+                    c0,0,0.905-184.043,0-203.096H246.4v28.779c8.973-13.807,24.986-33.547,60.856-33.547c44.437,0,77.744,29.02,77.744,91.398V378.002
+                    z" />
+                        </g>
+                    </svg>
+                </a>
+                </div>
+                <div class="connect_children">
+                    <a href="mailto:nagarajramachandran123@gmail.com">
+
+                    <svg class="mail_logo" xmlns="http://www.w3.org/2000/svg" viewBox="52 42 88 66">
+                        <path class="mail_v1" d="M58 108h14V74L52 59v43c0 3.32 2.69 6 6 6" />
+                        <path class="mail_v2" d="M120 108h14c3.32 0 6-2.69 6-6V59l-20 15" />
+                        <path class="mail_v3" d="M120 48v26l20-15v-8c0-7.42-8.47-11.65-14.4-7.2" />
+                        <path class="mail_v4" d="M72 74V48l24 18 24-18v26L96 92" />
+                        <path class="mail_v5" d="M52 51v8l20 15V48l-5.6-4.2c-5.94-4.45-14.4-.22-14.4 7.2" />
+                    </svg>
+                </a>
+                </div>
+                <div class="connect_children">
+                    <a href="https://www.facebook.com/nagaraj121999" target="_blank">
+                    <svg class = "fb_logo" xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 50 50" >  
+                        <path d="M41,4H9C6.24,4,4,6.24,4,9v32c0,2.76,2.24,5,5,5h32c2.76,0,5-2.24,5-5V9C46,6.24,43.76,4,41,4z M37,19h-2c-2.14,0-3,0.5-3,2 v3h5l-1,5h-4v15h-5V29h-4v-5h4v-3c0-4,2-7,6-7c2.9,0,4,1,4,1V19z"/>
+                 </svg>
+                </a>
+                </div>
+            </div>
+        </div>
+
     </div>
 </body>
