@@ -106,29 +106,132 @@
         .mail_logo:hover>.mail_v5 {
             fill: #c5221f
         }
-        .fb_logo{
+
+        .fb_logo {
             fill: gray;
             width: 40;
             height: 40;
         }
-        .fb_logo:hover{
-            fill:#4267B2;
-            cursor:pointer;
+
+        .fb_logo:hover {
+            fill: #4267B2;
+            cursor: pointer;
         }
+
         .social_container {
             display: grid;
             justify-content: center;
         }
-        .connect_container{
+
+        .profile_container_main {
             display: grid;
-grid-template-columns: repeat(3, auto);
-justify-items: center;
         }
-        .connect_children{
+
+        .connect_container {
+            display: grid;
+            grid-template-columns: repeat(3, auto);
+            justify-items: center;
+        }
+
+        .connect_children {
             align-self: center;
         }
 
-        @media only screen and (min-width: 250px) and (max-width: 725px) {
+        .profile_div {
+            display: grid;
+            justify-items: center;
+            padding: 1em;
+            background-color: whitesmoke;
+            border: 1px solid gainsboro;
+
+
+        }
+
+        .text_profile {
+            font-family: 'Poppins', sans-serif;
+
+        }
+
+        @media only screen and (min-width:250px) and (max-width:726px) {
+            .profile_container {
+                display: grid;
+                grid-template-columns: repeat(1, auto);
+                justify-items: center;
+                justify-content: space-around;
+                grid-row-gap: 1em;
+
+
+            }
+            .profile_div{
+            width: 85%;
+            }
+        }
+
+        @media only screen and (min-width:726px) and (max-width:1017px) {
+            .profile_container {
+                display: grid;
+
+                grid-template-columns: repeat(2, 45%);
+                justify-items: center;
+                justify-content: space-around;
+                grid-row-gap: 1em;
+                
+            }
+
+            .profile_div {
+                max-width: 390px;
+            }
+        }
+
+        @media only screen and (min-width:1017px) and (max-width:1260px) {
+            .profile_container {
+                display: grid;
+
+                grid-template-columns: repeat(3, 30%);
+                justify-items: center;
+                justify-content: space-around;
+
+            }
+
+            .profile_div {
+                max-width: 340px;
+            }
+
+            .profile_div:hover {
+                cursor: pointer;
+                -webkit-box-shadow: 5px 5px 5px 0px rgba(179, 179, 179, 1);
+                -moz-box-shadow: 5px 5px 5px 0px rgba(179, 179, 179, 1);
+                box-shadow: 5px 5px 5px 0px rgba(179, 179, 179, 1);
+                transition: 1s;
+            }
+        }
+
+        @media screen and (min-width:1260px) {
+            .profile_container {
+                display: grid;
+                grid-template-columns: repeat(3, 30%);
+                justify-items: center;
+                justify-content: space-around;
+
+            }
+
+            .profile_div {
+                display: grid;
+
+                max-width: 380px;
+
+            }
+
+            .profile_div:hover {
+                cursor: pointer;
+                -webkit-box-shadow: 5px 5px 5px 0px rgba(179, 179, 179, 1);
+                -moz-box-shadow: 5px 5px 5px 0px rgba(179, 179, 179, 1);
+                box-shadow: 5px 5px 5px 0px rgba(179, 179, 179, 1);
+                transition: 1s;
+            }
+        }
+
+        @media only screen and (min-width: 250px) and (max-width: 750px) {
             .content_container {
                 position: absolute;
                 top: 10;
@@ -165,7 +268,7 @@ justify-items: center;
 
         }
 
-        @media only screen and (min-width: 726px) {
+        @media only screen and (min-width: 750px) {
             .content_container {
                 position: absolute;
                 top: 10;
@@ -204,9 +307,16 @@ justify-items: center;
                 opacity: 0.9;
 
             }
+           
+
 
         }
+        a{
+                color: black;
+                text-decoration: none;
+            }
     </style>
+  
 </head>
 
 <body>
@@ -239,47 +349,93 @@ justify-items: center;
                 </div>
             </div>
         </div>
+        <div class="profile_container_main">
+            <h3 style="text-align: center;"> My Profiles</h3>
+
+            <div class="profile_container">
+                <div class="profile_div" onClick="open_medium()">
+
+                    <img src="/images/medium.png" width="300" height="50" class="logo_profile">
+                    <p class="text_profile">Find out my medium profile which contains blogs about react native, python,
+                        machine learning, programming related topics.</p>
+
+                </div>
+                <div class="profile_div" onClick="open_behance()">
+
+                    <img src="/images/behance_logo.svg" width="300" height="50">
+                    <p class="text_profile">Find out my behance profile which contains my figma design, blender works,
+                        photoshop works, video works.</p>
+
+                </div>
+                <div class="profile_div" onClick="open_leetcode()">
+
+                    <img src="/images/Leetcode.png" width="200" height="50">
+                    <p class="text_profile">Competitive Coding, one thing which will indirectly help on my day to day
+                        work and my all other Stuffs. Find out my LeetCode Profile. </p>
+
+                </div>
+
+            </div>
+        </div>
         <div class="social_container">
             <h3> Connect With Me</h3>
             <div class="connect_container">
                 <div class="connect_children">
                     <a href="https://in.linkedin.com/in/nagaraj-ramachandran-37152b149" target="_blank">
-                    <svg class="link_logo" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg"
-                        xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 455 455" xml:space="preserve">
-                        <g>
-                            <path style="fill-rule:evenodd;clip-rule:evenodd;"
-                                d="M246.4,204.35v-0.665c-0.136,0.223-0.324,0.446-0.442,0.665H246.4z" />
-                            <path style="fill-rule:evenodd;clip-rule:evenodd;" d="M0,0v455h455V0H0z M141.522,378.002H74.016V174.906h67.506V378.002z
+                        <svg class="link_logo" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg"
+                            xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 455 455" xml:space="preserve">
+                            <g>
+                                <path style="fill-rule:evenodd;clip-rule:evenodd;"
+                                    d="M246.4,204.35v-0.665c-0.136,0.223-0.324,0.446-0.442,0.665H246.4z" />
+                                <path style="fill-rule:evenodd;clip-rule:evenodd;" d="M0,0v455h455V0H0z M141.522,378.002H74.016V174.906h67.506V378.002z
                      M107.769,147.186h-0.446C84.678,147.186,70,131.585,70,112.085c0-19.928,15.107-35.087,38.211-35.087
                     c23.109,0,37.31,15.159,37.752,35.087C145.963,131.585,131.32,147.186,107.769,147.186z M385,378.002h-67.524V269.345
                     c0-27.291-9.756-45.92-34.195-45.92c-18.664,0-29.755,12.543-34.641,24.693c-1.776,4.34-2.24,10.373-2.24,16.459v113.426h-67.537
                     c0,0,0.905-184.043,0-203.096H246.4v28.779c8.973-13.807,24.986-33.547,60.856-33.547c44.437,0,77.744,29.02,77.744,91.398V378.002
                     z" />
-                        </g>
-                    </svg>
-                </a>
+                            </g>
+                        </svg>
+                    </a>
                 </div>
                 <div class="connect_children">
                     <a href="mailto:nagarajramachandran123@gmail.com">
 
-                    <svg class="mail_logo" xmlns="http://www.w3.org/2000/svg" viewBox="52 42 88 66">
-                        <path class="mail_v1" d="M58 108h14V74L52 59v43c0 3.32 2.69 6 6 6" />
-                        <path class="mail_v2" d="M120 108h14c3.32 0 6-2.69 6-6V59l-20 15" />
-                        <path class="mail_v3" d="M120 48v26l20-15v-8c0-7.42-8.47-11.65-14.4-7.2" />
-                        <path class="mail_v4" d="M72 74V48l24 18 24-18v26L96 92" />
-                        <path class="mail_v5" d="M52 51v8l20 15V48l-5.6-4.2c-5.94-4.45-14.4-.22-14.4 7.2" />
-                    </svg>
-                </a>
+                        <svg class="mail_logo" xmlns="http://www.w3.org/2000/svg" viewBox="52 42 88 66">
+                            <path class="mail_v1" d="M58 108h14V74L52 59v43c0 3.32 2.69 6 6 6" />
+                            <path class="mail_v2" d="M120 108h14c3.32 0 6-2.69 6-6V59l-20 15" />
+                            <path class="mail_v3" d="M120 48v26l20-15v-8c0-7.42-8.47-11.65-14.4-7.2" />
+                            <path class="mail_v4" d="M72 74V48l24 18 24-18v26L96 92" />
+                            <path class="mail_v5" d="M52 51v8l20 15V48l-5.6-4.2c-5.94-4.45-14.4-.22-14.4 7.2" />
+                        </svg>
+                    </a>
                 </div>
                 <div class="connect_children">
                     <a href="https://www.facebook.com/nagaraj121999" target="_blank">
-                    <svg class = "fb_logo" xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 50 50" >  
-                        <path d="M41,4H9C6.24,4,4,6.24,4,9v32c0,2.76,2.24,5,5,5h32c2.76,0,5-2.24,5-5V9C46,6.24,43.76,4,41,4z M37,19h-2c-2.14,0-3,0.5-3,2 v3h5l-1,5h-4v15h-5V29h-4v-5h4v-3c0-4,2-7,6-7c2.9,0,4,1,4,1V19z"/>
-                 </svg>
-                </a>
+                        <svg class="fb_logo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 50">
+                            <path
+                                d="M41,4H9C6.24,4,4,6.24,4,9v32c0,2.76,2.24,5,5,5h32c2.76,0,5-2.24,5-5V9C46,6.24,43.76,4,41,4z M37,19h-2c-2.14,0-3,0.5-3,2 v3h5l-1,5h-4v15h-5V29h-4v-5h4v-3c0-4,2-7,6-7c2.9,0,4,1,4,1V19z" />
+                        </svg>
+                    </a>
                 </div>
             </div>
         </div>
 
     </div>
 </body>
+<script>
+    function open_medium()
+   {
+     window.open('https://nagarajramachandran123.medium.com/');
+
+   }
+   function open_behance()
+   {
+     window.open('https://www.behance.net/nagarajr8');
+
+   }
+   function open_leetcode()
+   {
+     window.open('https://leetcode.com/nagarajramachandran123/');
+
+   }
+</script>
