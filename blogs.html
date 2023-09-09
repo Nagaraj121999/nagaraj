@@ -1,219 +1,247 @@
 <head>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet">
-     <meta content="width=device-width, initial-scale=1" name="viewport" /> 
+    <meta content="width=device-width, initial-scale=1" name="viewport" />
     <style>
-  
         #blog_container {
-            grid-template-columns: repeat(2, 1fr);
-         display: grid;
-         row-gap: 1.5em;
-         column-gap: 1em;
-         justify-items: center;
-         padding:1.2em;
-        }
+            display: grid;
+            justify-items: center;
+            margin-top: 0.5em;
+
+         }
 
         #blog_div {
-            background-color: #353839;
-
-box-shadow: inset 60px 58px 17px -54px rgba(255, 250, 255, 0.1);
-border-radius: 10px;
-padding: 1em;
-text-align: center;
-width: 300px;
+            background-color: whitesmoke;
+            border: 1px solid gainsboro;
+            display: grid;
+    
 
 
+           width: 90%;
+           
 
 
-        }
-        .description{
-            color: white;
-            font-family: 'Poppins', sans-serif;
-            height: 200px;
+
 
         }
+
+     
 
         body {
-            background-color: black;
             margin: 0;
             padding: 0;
         }
 
         .logo {
             width: 192px;
-         aspect-ratio:  2/0.3;
+            aspect-ratio: 2/0.3;
         }
 
-        .link {
-            text-align: center;
-            color: orange;
-            text-decoration: none;
+        .blog_title,.sno {
+            color: black;
             font-family: 'Poppins', sans-serif;
-            font-weight:bold;
-            letter-spacing: 0.1em;
-            font-size: 1.2em;
+            letter-spacing: 0.07em;
+            margin: 0;
 
 
         }
+        .blog_title{
+            border-right: 1.5px solid gainsboro;
+        }
+        .sno{
+            justify-self: center;
+            align-self: center;
 
-        #link_container {
-            padding: 1em;
+
 
         }
+        .link_img{
+            width: 30;
+            height: 30;
+
+        }
+        .anchor_link_img{
+            align-self: center;
+            justify-self: end;
+
+        }
+        .anchor_link_img{
+            cursor: pointer
+        }
+        .title{
+            text-align: center;
+            font-family: 'Poppins', sans-serif;
+            letter-spacing: 0.2em;
+            margin: 0;
+        }
+        .logo_em{
+            display: grid;
+            grid-template-columns: repeat(3,auto);
+            justify-content: center;
+            gap: 1em;
+        }
+        .title_logo{
+            width: 60;
+            height: 60;
+        }
+    
 
      
-        .logo_tech{
-            width: 35;
-            aspect-ratio: 1/1;            
-            border-radius: 4px;
 
+        @media screen and (max-width: 600px) and (min-width:320px) {
+   
+        #blog_div{
+                grid-template-columns: 12% 75% auto;
+                padding-top: 0.7em;
+        padding-bottom: 0.7em;
+        padding-left: 0.2em;
+        padding-right: 0.2em;
+        width: 95%;
+
+            }
+            .blog_title,.sno{
+                font-size: 1em;
+
+            }
+            #blog_container{
+                padding: 0.5em;
+            }
 
         }
-        #link_container{
+
+        @media screen and (max-width: 768px) and (min-width:600px) {
+            
+            #blog_div{
+                grid-template-columns: 7% 86% auto;
+                padding-top: 0.4em;
+        padding-bottom: 0.4em;
+        padding-left: 0.2em;
+        padding-right: 0.2em;
+
+            }
+            .blog_title,.sno{
+                font-size: 1.3em;
+
+            }
+            #blog_container{
+                padding: 1em;
+            }
+            
+        }
+
+        @media screen and (max-width: 992px) and (min-width:768px) {
+            #blog_div{
+                grid-template-columns: 4% 92% auto;
+                padding-top: 0.4em;
+        padding-bottom: 0.4em;
+        padding-left: 0.2em;
+        padding-right: 0.2em;
+
+            }
+            .blog_title,.sno{
+                font-size: 1.3em;
+
+            }
+            #blog_container{
+                padding: 1em;
+            }
+
+        }
+
+        @media screen and (max-width: 1200px) and (min-width:992px) {
+            #blog_div{
+                grid-template-columns: 4% 92% auto;
+                padding-top: 0.4em;
+        padding-bottom: 0.4em;
+        padding-left: 0.2em;
+        padding-right: 0.2em;
+
+            }
+            .blog_title,.sno{
+                font-size: 1.5em;
+
+            }
+            #blog_container{
+                padding: 1em;
+            }
+        }
+
+        @media screen and (min-width:1200px) {
+            #blog_div{
+                grid-template-columns: 4% 93% auto;
+                padding-top: 0.4em;
+        padding-bottom: 0.4em;
+        padding-left: 0.2em;
+        padding-right: 0.2em;
+
+            }
+            .blog_title,.sno{
+                font-size: 1.5em;
+
+            }
+            #blog_container{
+                padding: 1em;
+            }
+
          
-            height: 70px;
-
 
         }
-        @media screen and (max-width: 600px) and ( min-width:320px)  {
-         #blog_Container{
-
-       
-            grid-template-columns: repeat(1, 1fr);
-
-        }
-
-}
-@media screen and (max-width: 768px) and ( min-width:601px)  {
-    #blog_Container{
-
-       
-grid-template-columns: repeat(2, 1fr);
-
-}
-  
-}
-@media screen and (max-width: 992px) and ( min-width:769px)  {
-    #blog_Container{
-
-       
-grid-template-columns: repeat(3, 1fr);
-
-}
-  
-}
-@media screen and (max-width: 1200px) and ( min-width:993px)  {
-    #blog_Container{
-
-       
-grid-template-columns: repeat(3, 1fr);
-
-}
-}
-@media screen and ( min-width:1201px)  {
-    #blog_Container{
-
-       
-grid-template-columns: repeat(4, 1fr);
-
-}
-  
-}
     </style>
 </head>
 
 <body>
+    <h1 class="title">Blogs</h1>
+    <div class="logo_em">
+        <img class="title_logo" src="https://nagaraj121999.github.io/nagaraj/images/python.svg"/>
+        <img class="title_logo" src="https://nagaraj121999.github.io/nagaraj/images/c++.svg"/>
+        <img class="title_logo" src="https://nagaraj121999.github.io/nagaraj/images//react_logo.svg"/>
+
+
+
+    </div>
     <div id="blog_container">
         <div id="blog_div">
-            <img src="https://nagaraj121999.github.io/nagaraj/images/medium_white.png" class="logo"></img>
-            <div id="link_container">
-                <a class="Link" target="_blank"
-                    href="https://nagarajramachandran123.medium.com/session-local-storage-on-client-side-with-weather-api-example-3b6d99793e72">Session
-                    & Local Storage</a>
-
-            </div>
-           <div class="description">
-            <p>Blog About Local Storage and Session Storage in Browser with example</p>
-           </div>
-            <div id="logo_container">
-                <img src="https://nagaraj121999.github.io/nagaraj/images/js_logo.svg" class="logo_tech" >
-
-            </div>
+            <p class="sno">1.</p>
+            <p class="blog_title">Session & Local Storage on Javascript</p>
+            <a class="anchor_link_img" href="https://nagarajramachandran123.medium.com/session-local-storage-on-client-side-with-weather-api-example-3b6d99793e72" target="_blank">
+            <img  class ="link_img"src="https://nagaraj121999.github.io/nagaraj/images/arrow_right.svg" >
+        </a>
         </div>
         <div id="blog_div">
-            <img src="https://nagaraj121999.github.io/nagaraj/images/medium_white.png" class="logo"></img>
-            <div id="link_container">
-                <a class="Link" target="_blank"
-                    href="https://medium.com/@nagarajramachandran123/coin-possible-combinations-problem-2c7fbf6ebbfd">Coin Possible Combination Problem</a>
-
-            </div>
-           <div class="description">
-            <p>Blog About Coin Possible Combination Problem - Code Discussed in C++</p>
-           </div>
-            <div id="logo_container">
-                <img src="https://nagaraj121999.github.io/nagaraj/images/c++.svg" class="logo_tech" >
-
-            </div>
+            <p class="sno">2.</p>
+            <p class="blog_title">Shadows on React Native - Part 1</p>
+            <a class="anchor_link_img" href="https://nagarajramachandran123.medium.com/shadows-on-react-native-%EF%B8%8F-b8df37f28fba" target="_blank">
+                <img  class ="link_img"src="https://nagaraj121999.github.io/nagaraj/images/arrow_right.svg" >
+        </a>
         </div>
         <div id="blog_div">
-            <img src="https://nagaraj121999.github.io/nagaraj/images/medium_white.png" class="logo"></img>
-            <div id="link_container">
-                <a class="Link" target="_blank"
-                    href="https://medium.com/@nagarajramachandran123/otp-generation-and-validation-to-mail-using-python-with-gui-b5bbffba776f">OTP Generation and Validation in Python</a>
-            </div>
-           <div class="description">
-            <p>Blog About OTP generation and validation in Python using Tkinter GUI</p>
-           </div>
-            <div id="logo_container">
-                <img src="https://nagaraj121999.github.io/nagaraj/images/python.svg" class="logo_tech" >
-
-            </div>
-        </div>
-  
-        <div id="blog_div">
-            <img src="https://nagaraj121999.github.io/nagaraj/images/medium_white.png" class="logo"></img>
-            <div id="link_container">
-                <a class="Link" target="_blank"
-                    href="https://medium.com/analytics-vidhya/linear-regression-explanation-with-example-300d164dc824">Linear Regression</a>
-            </div>
-           <div class="description">
-            <p>Linear Regression with example</p>
-           </div>
-            <div id="logo_container">
-                <img src="https://nagaraj121999.github.io/nagaraj/images/python.svg" class="logo_tech" >
-
-            </div>
+            <p class="sno">3.</p>
+            <p class="blog_title">Shadows on React Native - Part 2</p>
+            <a class="anchor_link_img" href="https://nagarajramachandran123.medium.com/shadows-on-react-native-part-2-cff8d1d45e8d" target="_blank">
+                <img  class ="link_img"src="https://nagaraj121999.github.io/nagaraj/images/arrow_right.svg" >
+        </a>
         </div>
         <div id="blog_div">
-            <img src="https://nagaraj121999.github.io/nagaraj/images/medium_white.png" class="logo"></img>
-            <div id="link_container">
-                <a class="Link" target="_blank"
-                    href="https://medium.com/analytics-vidhya/k-nearest-neighbor-explanation-with-example-843d78d0288e">K- Nearest Neighbor</a>
-            </div>
-           <div class="description">
-            <p>K- Nearest Neighbor with example</p>
-           </div>
-            <div id="logo_container">
-                <img src="https://nagaraj121999.github.io/nagaraj/images/python.svg" class="logo_tech" >
-
-            </div>
+            <p class="sno">4.</p>
+            <p class="blog_title">Linear Regression - Explanation</p>
+            <a class="anchor_link_img" href="https://medium.com/analytics-vidhya/linear-regression-explanation-with-example-300d164dc824" target="_blank">
+                <img  class ="link_img"src="https://nagaraj121999.github.io/nagaraj/images/arrow_right.svg" >
+        </a>
         </div>
         <div id="blog_div">
-            <img src="https://nagaraj121999.github.io/nagaraj/images/medium_white.png" class="logo"></img>
-            <div id="link_container">
-                <a class="Link" target="_blank"
-                    href="https://medium.com/analytics-vidhya/k-nearest-neighbor-explanation-with-example-843d78d0288e">Remove Green Screen Python</a>
-            </div>
-           <div class="description">
-            <p>Remove Green screen in Python without using any predefined functions</p>
-           </div>
-            <div id="logo_container">
-                <img src="https://nagaraj121999.github.io/nagaraj/images/python.svg" class="logo_tech" >
-
-            </div>
+            <p class="sno">5.</p>
+            <p class="blog_title">K Nearest Neighbor - Explanation</p>
+            <a class="anchor_link_img" href="https://medium.com/analytics-vidhya/k-nearest-neighbor-explanation-with-example-843d78d0288e" target="_blank">
+                <img  class ="link_img"src="https://nagaraj121999.github.io/nagaraj/images/arrow_right.svg" >
+        </a>
         </div>
  
-   
-        </div>
+ 
+
+
+
+
+
     </div>
+
 
 </body>
