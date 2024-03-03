@@ -1,1 +1,358 @@
-<h1>In Progress</h1>
+<head>
+    <style>
+        .main_pdf {
+            display: grid;
+            justify-items: center;
+            justify-content: center;
+        }
+
+        .child_pdf {
+            display: grid;
+            background-color: whitesmoke;
+            border: 2px solid rgba(0, 0, 0, 0.2);
+            border-radius: 15px;
+            transition: 0.5s;
+        }
+
+        @media screen and (max-width: 600px) and (min-width:320px) {
+            .main_pdf {
+                grid-template-columns: repeat(1, 80%);
+                grid-gap: 2em;
+            }
+
+            .pdf_img {
+                overflow: hidden;
+                display: grid;
+                padding-top:1em;
+                opacity: 1;
+
+            }
+            
+          
+            .child_pdf {
+                box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.1), 0 3px 8px 0 rgba(0, 0, 0, 0.1);
+
+            }
+            .pdf_text {
+                padding-top:1em;
+                font-family: 'Poppins', sans-serif;
+                letter-spacing: 0.1em;
+                padding: 0.2em;
+                height: 120px;
+                overflow: hidden;
+                font-size: 35px;
+                color: rgba(0, 0, 0, 0.8);
+                transition: 0.5s;
+
+
+            }
+            .preview_image {
+                width: 90%;
+                max-height: 600;
+                justify-self: center;
+                aspect-ratio: 1/1;
+                object-fit: cover;
+                border-radius: 5px;
+            }
+        }
+
+        @media screen and (max-width: 768px) and (min-width:600px) {
+            .main_pdf {
+                grid-template-columns: repeat(1, 80%);
+                grid-gap: 2em;
+            }
+
+            .pdf_img {
+                overflow: hidden;
+                display: grid;
+                padding-top:1em;
+                opacity: 1;
+
+            }
+            
+          
+            .child_pdf {
+                box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.1), 0 3px 8px 0 rgba(0, 0, 0, 0.1);
+
+            }
+            .pdf_text {
+                padding-top:1em;
+                font-family: 'Poppins', sans-serif;
+                letter-spacing: 0.1em;
+                padding: 0.2em;
+                height: 120px;
+                overflow: hidden;
+                font-size: 35px;
+                color: rgba(0, 0, 0, 0.8);
+                transition: 0.5s;
+
+
+            }
+            .preview_image {
+                width: 90%;
+                max-height: 600;
+                justify-self: center;
+                aspect-ratio: 1/1;
+                object-fit: cover;
+                border-radius: 5px;
+            }
+        }
+
+        @media screen and (max-width: 992px) and (min-width:768px) {
+            .main_pdf {
+                grid-template-columns: repeat(2, 45%);
+                grid-gap: 2.3em;
+
+            }
+
+            .pdf_img {
+                overflow: hidden;
+                display: grid;
+                padding-top:1em;
+                opacity: 1;
+
+            }
+            
+          
+            .child_pdf {
+                box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.1), 0 3px 8px 0 rgba(0, 0, 0, 0.1);
+
+            }
+            .pdf_text {
+                padding-top:1em;
+                font-family: 'Poppins', sans-serif;
+                letter-spacing: 0.1em;
+                padding: 0.2em;
+                height: 120px;
+                overflow: hidden;
+                font-size: 35px;
+                color: rgba(0, 0, 0, 0.8);
+                transition: 0.5s;
+
+
+            }
+            .preview_image {
+                width: 90%;
+                max-height: 600;
+                justify-self: center;
+                aspect-ratio: 1/1;
+                object-fit: cover;
+                border-radius: 5px;
+            }
+        }
+
+        @media screen and (max-width: 1200px) and (min-width:992px) {
+            .main_pdf {
+                grid-template-columns: repeat(4, 23%);
+                grid-gap: 1.5em;
+
+            }
+
+            .pdf_img {
+                overflow: hidden;
+                transition: 0.5s;
+                display: grid;
+                padding-top:1em;
+                opacity: 1;
+
+            }
+            
+          
+            .child_pdf {
+                box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+
+            }
+            .pdf_text {
+                padding-top:1em;
+                font-family: 'Poppins', sans-serif;
+                letter-spacing: 0.1em;
+                padding: 0.5em;
+                height: 100px;
+                overflow: hidden;
+                font-size: 1.5em;
+                color: rgba(0, 0, 0, 0.8);
+                transition: 0.5s;
+
+
+            }
+            .preview_image {
+                width: 90%;
+                max-height: 360;
+                justify-self: center;
+                aspect-ratio: 1/1;
+                object-fit: cover;
+                border-radius: 10px;
+            }
+        }
+
+        @media screen and (min-width:1200px) {
+            .main_pdf {
+                grid-template-columns: repeat(5, 18%);
+                grid-gap: 2em;
+
+            }
+
+            .pdf_img {
+                overflow: hidden;
+                transition: 0.5s;
+                display: grid;
+                padding-top:1em;
+                opacity: 0.9;
+
+            }
+            .child_pdf:hover .pdf_img {
+                transition: 0.5s;
+                opacity: 1;
+            }
+            .child_pdf:hover .pdf_text {
+                color: rgba(0, 0, 0, 1);
+                transition: 0.5s;
+            }
+            .child_pdf:hover {
+                box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+                transition: 0.5s;
+                cursor: pointer;
+
+            }
+            .pdf_text {
+                padding-top:1em;
+                font-family: 'Poppins', sans-serif;
+                padding: 0.5em;
+                height: 100px;
+                overflow: hidden;
+                font-size: 1.5em;
+                color: rgba(0, 0, 0, 0.8);
+                transition: 0.5s;
+
+
+            }
+            .preview_image {
+                width: 90%;
+                max-height: 380;
+                justify-self: center;
+                aspect-ratio: 1/1;
+                object-fit: cover;
+                border-radius: 10px;
+            }
+
+
+
+        }
+    </style>
+</head>
+<div>
+    <div class="main_pdf">
+        <div class="child_pdf">
+            <div class='pdf_img'>
+                <img class='preview_image' src="https://nagaraj121999.github.io/nagaraj/images/node_js_intro_preview.png"loading="lazy"
+                alt="Unable to Load Image">
+
+            </div>
+            <div class="pdf_text">
+                <p> Node JS Intro and History</p>
+
+            </div>
+        </div>
+        <div class="child_pdf">
+            <div class='pdf_img'>
+                <img class='preview_image' src="https://nagaraj121999.github.io/nagaraj/images/node_js_work_preview.png"loading="lazy"
+                alt="Unable to Load Image">
+            </div>
+            <div class="pdf_text">
+                <p>Working of Node JS</p>
+
+            </div>
+        </div>
+        <div class="child_pdf">
+            <div class='pdf_img'>
+                <img class='preview_image' src="https://nagaraj121999.github.io/nagaraj/images/figma_loop_animation.png"loading="lazy"
+                alt="Unable to Load Image">
+            </div>
+            <div class="pdf_text">
+                <p>Loop Animation - Figma</p>
+
+            </div>
+        </div>
+        <div class="child_pdf">
+            <div class='pdf_img'>
+                <img class='preview_image' src="https://nagaraj121999.github.io/nagaraj/images/package_json.png"loading="lazy"
+                alt="Unable to Load Image">
+            </div>
+            <div class="pdf_text">
+               <p> Package.JSON</p>
+
+            </div>
+        </div>
+        <div class="child_pdf">
+            <div class='pdf_img'>
+                <img class='preview_image' src="https://nagaraj121999.github.io/nagaraj/images/Figma_lite_dark_preview.png"loading="lazy"
+                alt="Unable to Load Image">
+            </div>
+            <div class="pdf_text">
+                <p>Dark/Lite Mode Figma</p>
+
+            </div>
+        </div>
+        <div class="child_pdf">
+            <div class='pdf_img'>
+                <img class='preview_image' src="https://nagaraj121999.github.io/nagaraj/images/figma_overlay_preview.png" loading="lazy"
+                    alt="Unable to Load Image">
+            </div>
+            <div class="pdf_text">
+                <p>Overlay Figma</p>
+
+            </div>
+        </div>
+        <div class="child_pdf">
+            <div class='pdf_img'>
+                <img class='preview_image' src="https://nagaraj121999.github.io/nagaraj/images/SASS_Insta.png"loading="lazy"
+                alt="Unable to Load Image">
+            </div>
+            <div class="pdf_text">
+                <p>SCSS-Intro</p>
+
+            </div>
+        </div>
+        <div class="child_pdf">
+            <div class='pdf_img'>
+                <img class='preview_image' src="https://nagaraj121999.github.io/nagaraj/images/mixin_include.png"loading="lazy"
+                alt="Unable to Load Image">
+            </div>
+            <div class="pdf_text">
+                <p>SCSS - Mixins and Include</p>
+
+            </div>
+        </div>
+        <div class="child_pdf">
+            <div class='pdf_img'>
+                <img class='preview_image' src="https://nagaraj121999.github.io/nagaraj/images/react_intro.png"loading="lazy"
+                alt="Unable to Load Image">
+            </div>
+            <div class="pdf_text">
+                <p>React JS Brief Introduction</p>
+
+            </div>
+        </div>
+        <div class="child_pdf">
+            <div class='pdf_img'>
+                <img class='preview_image' src="https://nagaraj121999.github.io/nagaraj/images/JSX.png"loading="lazy"
+                alt="Unable to Load Image">
+            </div>
+            <div class="pdf_text">
+                <p>JSX Introduction</p>
+
+            </div>
+        </div>
+        <div class="child_pdf">
+            <div class='pdf_img'>
+                <img class='preview_image' src="https://nagaraj121999.github.io/nagaraj/images/http_vs_htps.png"loading="lazy"
+                alt="Unable to Load Image">
+            </div>
+            <div class="pdf_text">
+                <p>HTTP vs HTTP-S</p>
+
+            </div>
+        </div>
+
+    </div>
+</div>
